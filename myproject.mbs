@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<modbusscope datalevel="2">
+ <modbus>
+  <connection>
+   <connectionid>0</connectionid>
+   <ip>127.0.0.1</ip>
+   <port>502</port>
+   <slaveid>1</slaveid>
+   <timeout>1000</timeout>
+   <consecutivemax>125</consecutivemax>
+  </connection>
+  <connection>
+   <connectionid>1</connectionid>
+   <ip>127.0.0.1</ip>
+   <port>502</port>
+   <slaveid>1</slaveid>
+   <timeout>1000</timeout>
+   <consecutivemax>125</consecutivemax>
+  </connection>
+  <log>
+   <polltime>250</polltime>
+   <absolutetimes>false</absolutetimes>
+   <logtofile enabled="true"/>
+  </log>
+ </modbus>
+ <scope>
+  <register active="true">
+   <address>40001</address>
+   <text>Register 40001</text>
+   <unsigned>true</unsigned>
+   <multiply>1</multiply>
+   <divide>1</divide>
+   <color>#000000</color>
+   <bitmask>0xffff</bitmask>
+   <shift>0</shift>
+   <connectionid>0</connectionid>
+  </register>
+ </scope>
+ <view>
+  <scale>
+   <xaxis mode="auto"/>
+   <yaxis mode="auto"/>
+  </scale>
+ </view>
+</modbusscope>
